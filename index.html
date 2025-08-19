@@ -6,11 +6,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no" />
-    <title>ix-Flow</title>
+    <title>Home | ix-Flow</title>
 
     <!-- favicon-->
-    <link rel="shortcut icon" href="assets/favicon.jpg" type="image/x-icon">
-    <link rel="icon" href="assets/favicon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.svg" type="image/x-icon">
 
     <!-- bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -51,10 +51,9 @@
 
     <style>
         /* section Header */
-        .logo-typography {
-            color: var(--primary-color);
-            font-size: var(--fs-logo);
-            font-weight: var(--fw-700);
+        .logo {
+            width: 220px;
+            height: auto;
         }
 
         .material-icons.header {
@@ -131,8 +130,9 @@
             margin-top: 90px;
         }
 
-        .header-container-bg {
-            "background:var(--bg-body-secondary); z-index: -1;
+        .container-bg {
+            background: var(--bg-body-secondary);
+            z-index: -1;
 
         }
 
@@ -150,9 +150,17 @@
         }
 
         .campaign-img img {
-            width: -webkit-fill-available;
+            width: auto;
+            display: block;
+            margin: auto;
+        }
+
+        .what-img img {
+            width: auto;
+            display: block;
+            margin: auto;
             box-shadow: var(--box-shadow-card);
-            border: var(--border-secondary);
+            /* border: var(--border-secondary); */
             border-radius: var(--border-radius-24);
         }
 
@@ -165,6 +173,11 @@
             box-shadow: var(--box-shadow-card);
             background: var(--white-color);
             height: 100%;
+        }
+
+        .point-block.active {
+            background: var(--tertiary-color-14);
+            border-top: 8px solid var(--tertiary-color) !important
         }
 
         .point-block.disabled {
@@ -239,16 +252,11 @@
             border-radius: 0 400px 0 0;
         }
 
-        .where-container-bg {
-            background: var(--bg-body-secondary);
-            z-index: -1;
-        }
-
 
 
         /* section What */
         .tag-cat {
-            background: var(--primary-color-30);
+            background: var(--primary-color-14);
             width: fit-content;
             border-radius: 100px;
         }
@@ -272,22 +280,17 @@
         }
 
         .tag-sub-cat {
-            background: var(--primary-color-30);
             color: var(--primary-color);
         }
 
         .tag-sub-cat.active {
-            background: var(--primary-color);
+            background: var(--tertiary-color);
             color: var(--white-color);
         }
 
         .what-container {
             border-radius: 400px 0 0 400px;
             background: var(--bg-body-secondary);
-        }
-
-        .what-container-bg {
-            z-index: -1;
         }
 
         .what-img img {
@@ -309,7 +312,7 @@
         }
 
         .why-container .row .col-xxl:nth-child(2) .point-block {
-            border-top: 8px solid var(--sub-color1) !important;
+            border-top: 8px solid var(--sub-color5) !important;
         }
 
         .why-container .row .col-xxl:nth-child(3) .point-block {
@@ -317,7 +320,7 @@
         }
 
         .why-container .row .col-xxl:nth-child(4) .point-block {
-            border-top: 8px solid var(--sub-color5) !important;
+            border-top: 8px solid var(--sub-color6) !important;
         }
 
         .why-container .row .col-xxl:nth-child(5) .point-block {
@@ -352,6 +355,7 @@
 
         .how-block {
             width: 582px !important;
+            max-width: 100%;
         }
 
         .arrow {
@@ -432,17 +436,12 @@
             border-radius: 400px 0 0 400px;
         }
 
-        .who-container-bg {
-            background: var(--bg-body-secondary);
-            z-index: -1;
-        }
-
 
 
         /* section Footer */
         a.icon-footer {
             color: var(--white-color);
-            background: var(--secondary-color);
+            background: var(--primary-color);
             width: 28px;
             height: 28px;
             font-size: var(--fs-button);
@@ -455,7 +454,7 @@
         a.icon-footer:hover,
         a.icon-footer:focus {
             color: var(--white-color);
-            background: var(--primary-color);
+            background: var(--tertiary-color);
         }
 
         .footer-container {
@@ -477,7 +476,7 @@
             .slick-current {
                 margin-left: -100px;
                 transition: all .3s;
-                background: #e5faf1 !important;
+                background: var(--tertiary-color-14) !important;
                 border-top: 8px solid var(--sub-color8) !important;
             }
 
@@ -504,6 +503,10 @@
 
             .heading-effect h2 {
                 text-align: left !important;
+            }
+
+            .testimonials-slider .slick-list {
+                overflow: visible;
             }
         }
 
@@ -532,7 +535,7 @@
             <div class="container">
                 <div class="d-flex align-items-end">
                     <a class="navbar-brand" href="index.html">
-                        <h1 class="logo-typography">ix-Flow</h1>
+                        <img src="assets/logo-horizontal.svg" class="logo">
                     </a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -565,7 +568,8 @@
                         </li>
                     </ul>
 
-                    <a class="ms-auto" href="https://calendly.com/ixen/consultation" target="_blank">
+                    <a class="ms-auto navbar-right d-flex justify-content-end"
+                        href="https://calendly.com/ixen/consultation" target="_blank">
                         <button type="button" class="btn btn-primary d-none d-lg-block">Book Demo</button>
                     </a>
                 </div>
@@ -578,13 +582,13 @@
     <!-- Header -->
     <div>
         <div class="container-fluid header-container p-0 pt-4 position-relative bg-white">
-            <div class="header-container-bg position-absolute w-100 h-100 start-0 bottom-0"></div>
+            <div class="container-bg position-absolute w-100 h-100 start-0 bottom-0"></div>
 
             <div class="container-xl">
                 <div class="row">
                     <div class="col-12">
                         <div>
-                            <h1 class="text-center mb-sm-5 mb-4 mx-auto header-h1">Ultimate Tool to
+                            <h1 class="text-center mb-sm-5 mb-4 mx-auto header-h1 tertiary-color ">Ultimate Tool to
                                 Increase Your
                                 <span class="text-highlight-primary">Sales Revenue</span>
                                 <span class="material-symbols-outlined material-icons header d-sm-inline-flex d-none">
@@ -628,7 +632,7 @@
     <div>
         <div class="container-fluid p-0 position-relative campaign-container">
             <div class="container campaign-img position-absolute start-0 end-0">
-                <img src="assets/campaign-flow.jpg">
+                <img src="assets/campaign-flow.png">
             </div>
         </div>
     </div>
@@ -638,7 +642,7 @@
     <!-- Where -->
     <div>
         <div class="container-fluid where-container bg-white">
-            <div class="where-container-bg position-absolute end-0 w-100 h-100">
+            <div class="container-bg position-absolute end-0 w-100 h-100">
             </div>
 
             <div class="container">
@@ -740,7 +744,7 @@
     <div>
         <div class="container-fluid what-container position-relative">
 
-            <div class="what-container-bg position-absolute top-0 start-0 bg-white w-100 h-100"></div>
+            <div class="container-bg position-absolute top-0 start-0 bg-white w-100 h-100"></div>
 
             <div class="container">
 
@@ -759,7 +763,7 @@
                     <div class="col-lg-6">
                         <div class="campaign-img what-img h-100 d-flex justify-content-end" data-aos="fade-right"
                             data-aos-duration="1500">
-                            <img src="assets/campaign-flow.jpg">
+                            <img src="assets/campaign-flow-full.png">
                         </div>
                     </div>
 
@@ -950,7 +954,7 @@
                     <div class="col-lg-6 order-lg-2 order-1">
                         <div class="campaign-img what-img h-100 d-flex justify-content-start" data-aos="fade-left"
                             data-aos-duration="1500">
-                            <img src="assets/campaign-flow.jpg">
+                            <img src="assets/campaign-statistics.png">
                         </div>
                     </div>
                 </div>
@@ -1077,7 +1081,7 @@
                                     </div>
                                 </div>
 
-                                <br><br><br><br><br><br>
+                                <div class="d-lg-block d-none"><br><br><br><br><br><br></div>
                             </div>
                         </div>
                     </div>
@@ -1183,9 +1187,9 @@
     <!-- Who -->
     <div>
         <div class="container-fluid who-container position-relative bg-white">
-            <div class="who-container-bg position-absolute top-0 start-0 w-100 h-100"></div>
+            <div class="container-bg position-absolute top-0 start-0 w-100 h-100"></div>
 
-            <div class="who-container-bg position-absolute bottom-0 start-0 w-100 h-100"></div>
+            <div class="container-bg position-absolute bottom-0 start-0 w-100 h-100"></div>
 
             <div class="container">
 
@@ -1303,12 +1307,13 @@
                                     <input type="text" class="form-control my-auto" placeholder="Enter your work email"
                                         aria-label="Username" aria-describedby="basic-addon1">
                                     <div class="input-btn">
-                                        <button type="button" class="btn btn-primary">
+                                        <button type="button" class="btn btn-secondary">
                                             Start Free Trial</button>
                                     </div>
                                 </div>
 
-                                <p>Have questions? <a class="text-white cta-link" href="https://calendly.com/ixen/consultation">Book a demo</a> with us!</p>
+                                <p>Have questions? <a class="text-white cta-link"
+                                        href="https://calendly.com/ixen/consultation">Book a demo</a> with us!</p>
                             </div>
                         </div>
                     </div>
@@ -1333,7 +1338,7 @@
                     <div class="col-sm-6 col-12 d-flex align-items-center order-1">
                         <div>
                             <a class="navbar-brand" href="index.html">
-                                <h1 class="logo-typography">ix-Flow</h1>
+                                <img src="assets/logo-horizontal.svg" class="logo">
                             </a>
                         </div>
                     </div>
@@ -1441,8 +1446,8 @@
                 { background: '#FBA65130', color: '#FBA651' },
                 { background: '#FFB61A30', color: '#FFB61A' },
                 { background: '#FF66A730', color: '#FF66A7' },
+                { background: '#FB6A7130', color: '#FB6A71' },
                 { background: '#7D66FF30', color: '#7D66FF' },
-                { background: '#6699FF30', color: '#6699FF' },
                 { background: '#33CFFF30', color: '#33CFFF' },
                 { background: '#55DEA330', color: '#55DEA3' },
             ];
@@ -1510,8 +1515,8 @@
             { color: '#FBA651', bg: '#fef3e7' }, // 2nd
             { color: '#FFB61A', bg: '#fff5d3' }, // 3rd
             { color: '#FF66A7', bg: '#ffeaf3' }, // 4th
-            { color: '#7D66FF', bg: '#edeaff' }, // 5th
-            { color: '#6699FF', bg: '#eaf1ff' }, // 6th
+            { color: '#fb6a71', bg: '#feeaeb' }, // 5th
+            { color: '#7D66FF', bg: '#edeaff' }, // 6th
             { color: '#33CFFF', bg: '#e2f8ff' }, // 7th
             { color: '#55DEA3', bg: '#e7faf2' }, // 8th
         ];
@@ -1541,7 +1546,6 @@
             "Recruiters",
             "HR",
             "Insurance",
-            "Property",
             "Coaches"
         ];
 
