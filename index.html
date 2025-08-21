@@ -479,21 +479,11 @@
             }
 
             .slick-current {
-                margin-left: -100px;
-                transition: all .3s;
-                background: var(--secondary-color-14) !important;
-                border-top: 8px solid var(--secondary-color) !important;
+                margin-left: -100px !important;
             }
 
             .slick-track {
                 margin-left: 100px;
-            }
-
-            .slick-current .icon-numbered.initial {
-                font-size: 18px;
-                font-weight: var(--fw-500);
-                background: var(--primary-color) !important;
-                color: var(--white-color) !important;
             }
 
             .how-block {
@@ -522,6 +512,21 @@
             .how-block {
                 width: auto;
                 max-width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 576px) {
+            .slick-current {
+                transition: all .3s;
+                background: var(--secondary-color-14) !important;
+                border-top: 8px solid var(--secondary-color) !important;
+            }
+
+            .slick-current .icon-numbered.initial {
+                font-size: 18px;
+                font-weight: var(--fw-500);
+                background: var(--primary-color) !important;
+                color: var(--white-color) !important;
             }
         }
 
@@ -1109,7 +1114,7 @@
 
                     <div class="col-lg-6">
                         <div class="testimonials-slider" data-aos="fade-left" data-aos-duration="1500">
-                            <div class="point-block my-lg-4 my-0 mx-lg-0 mx-sm-4 mx-1 how-block">
+                            <div class="point-block my-lg-4 my-0 mx-sm-4 mx-1 how-block">
                                 <div class="point-block-body how p-3">
                                     <h6>Here is the title for General Message 1</h6>
                                     <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat
@@ -1126,7 +1131,7 @@
                                 </div>
                             </div>
 
-                            <div class="point-block my-lg-4 my-0 mx-lg-0 mx-sm-4 mx-1 how-block">
+                            <div class="point-block my-lg-4 my-0 mx-sm-4 mx-1 how-block">
                                 <div class="point-block-body how p-3">
                                     <h6>Here is the title for General Message 2</h6>
                                     <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat
@@ -1143,7 +1148,7 @@
                                 </div>
                             </div>
 
-                            <div class="point-block my-lg-4 my-0 mx-lg-0 mx-sm-4 mx-1 how-block">
+                            <div class="point-block my-lg-4 my-0 mx-sm-4 mx-1 how-block">
                                 <div class="point-block-body how p-3">
                                     <h6>Here is the title for General Message 3</h6>
                                     <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat
@@ -1160,7 +1165,7 @@
                                 </div>
                             </div>
 
-                            <div class="point-block my-lg-4 my-0 mx-lg-0 mx-sm-4 mx-1 how-block">
+                            <div class="point-block my-lg-4 my-0 mx-sm-4 mx-1 how-block">
                                 <div class="point-block-body how p-3">
                                     <h6>Here is the title for General Message 4</h6>
                                     <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat
@@ -1177,7 +1182,7 @@
                                 </div>
                             </div>
 
-                            <div class="point-block my-lg-4 my-0 mx-lg-0 mx-sm-4 mx-1 how-block">
+                            <div class="point-block my-lg-4 my-0 mx-sm-4 mx-1 how-block">
                                 <div class="point-block-body how p-3">
                                     <h6>Here is the title for General Message 5</h6>
                                     <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat
@@ -1573,7 +1578,6 @@
                         vertical: false,
                         verticalSwiping: false,
                         slidesToShow: 1,
-                        centerMode: true
                     }
                 }
             ]
